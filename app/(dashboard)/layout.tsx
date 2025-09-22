@@ -33,12 +33,6 @@ function UserMenu() {
   if (!user) {
     return (
       <>
-        <Link
-          href="/pricing"
-          className="text-sm font-medium text-gray-700 hover:text-gray-900"
-        >
-          Pricing
-        </Link>
         <Button asChild className="rounded-full">
           <Link href="/sign-up">Sign Up</Link>
         </Button>
@@ -94,6 +88,13 @@ function Header() {
           </div>
         </Link>
         <div className="flex items-center space-x-4">
+          <nav className="hidden md:flex items-center space-x-6 mr-6">
+            <Link href="/" className="text-base font-medium text-gray-700 hover:text-gray-900">Home</Link>
+            <Link href="/#wege" className="text-base font-medium text-gray-700 hover:text-gray-900">8 Wege</Link>
+            <Link href="/#fuer-wen" className="text-base font-medium text-gray-700 hover:text-gray-900">Für wen?</Link>
+            <Link href="/#herausforderungen" className="text-base font-medium text-gray-700 hover:text-gray-900">Herausforderungen</Link>
+            <Link href="/#warum" className="text-base font-medium text-gray-700 hover:text-gray-900">Warum OKTOWAY?</Link>
+          </nav>
           <Suspense fallback={<div className="h-9" />}>
             <UserMenu />
           </Suspense>

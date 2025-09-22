@@ -1,10 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
+import { Eye, Scan, Gauge, Heart, Rocket, MessageCircle, Move, Unlock, Users, GraduationCap, Home } from 'lucide-react';
 
 export default function HomePage() {
   return (
     <main>
-      <section className="py-20">
+      <section className="py-20" id="hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
             <div className="lg:col-span-7 lg:pr-8">
@@ -33,7 +34,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white w-full">
+      
+
+      <section className="py-16 bg-white w-full" id="wege">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
             Die 8 Wege von Oktoway
@@ -91,11 +94,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      
+
+      <section className="py-16 bg-gray-50" id="fuer-wen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             <Card>
-              <CardHeader>
+              <CardHeader className="flex flex-row items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <GraduationCap className="h-5 w-5" />
+                </div>
                 <CardTitle className="text-xl">Für Schüler:innen</CardTitle>
               </CardHeader>
               <CardContent>
@@ -109,7 +117,10 @@ export default function HomePage() {
               </CardContent>
             </Card>
             <Card>
-              <CardHeader>
+              <CardHeader className="flex flex-row items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <Users className="h-5 w-5" />
+                </div>
                 <CardTitle className="text-xl">Für Lehrer:innen</CardTitle>
               </CardHeader>
               <CardContent>
@@ -123,7 +134,10 @@ export default function HomePage() {
               </CardContent>
             </Card>
             <Card>
-              <CardHeader>
+              <CardHeader className="flex flex-row items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Home className="h-5 w-5" />
+                </div>
                 <CardTitle className="text-xl">Für Eltern</CardTitle>
               </CardHeader>
               <CardContent>
@@ -138,7 +152,156 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <footer className="py-16 bg-white border-t">
+
+      <section className="py-16 bg-gray-50" id="herausforderungen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            Herausforderungen für Schüler:innen und Jugendliche heute
+          </h2>
+          <ol className="mt-8 space-y-6 list-decimal pl-5 text-gray-700">
+            <li>
+              <div className="text-lg font-semibold text-gray-900">
+                Dauerstress und Leistungsdruck
+              </div>
+              <p className="mt-2">
+                Viele Jugendliche stehen unter hohem schulischem und außerschulischem Druck: Noten, Prüfungen, Social Media–Vergleiche und Zukunftsängste. Das führt oft zu Anspannung, Schlafproblemen oder dem Gefühl, nie „genug“ zu sein.
+              </p>
+            </li>
+            <li>
+              <div className="text-lg font-semibold text-gray-900">
+                Emotionale Überforderung
+              </div>
+              <p className="mt-2">
+                Gefühle wie Angst, Wut oder Traurigkeit sind normal – doch vielen fehlt das Werkzeug, sie bewusst wahrzunehmen und konstruktiv damit umzugehen. Stattdessen stauen sich Emotionen auf oder brechen unkontrolliert heraus.
+              </p>
+            </li>
+            <li>
+              <div className="text-lg font-semibold text-gray-900">
+                Digitale Ablenkung und ständige Erreichbarkeit
+              </div>
+              <p className="mt-2">
+                Smartphones, Social Media und Gaming machen es schwer, sich zu konzentrieren und echte Pausen zu erleben. Die ständige Reizüberflutung kann zu innerer Unruhe und nachlassender Aufmerksamkeit führen.
+              </p>
+            </li>
+            <li>
+              <div className="text-lg font-semibold text-gray-900">
+                Konflikte und fehlende Kommunikation
+              </div>
+              <p className="mt-2">
+                Ob in der Klasse, in der Familie oder im Freundeskreis – Missverständnisse und Streitigkeiten belasten. Ohne Strategien zur gewaltfreien Kommunikation eskalieren Konflikte schnell.
+              </p>
+            </li>
+            <li>
+              <div className="text-lg font-semibold text-gray-900">
+                Orientierungslosigkeit und Selbstzweifel
+              </div>
+              <p className="mt-2">
+                Die Suche nach der eigenen Identität kann verunsichern. Viele Jugendliche fragen sich: „Wer bin ich?“, „Was kann ich?“, „Wie finde ich meinen Platz?“ – und fühlen sich dabei allein.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white w-full" id="warum">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Warum Oktoway die passende Antwort ist</h2>
+          <p className="mt-4 text-lg text-gray-700">
+            Das Projekt Oktoway – Acht Wege zu ganzheitlicher Stärke setzt genau hier an. Es vermittelt Schritt für Schritt Kompetenzen, die junge Menschen heute dringend brauchen:
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Eye className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Achtsamkeit</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Jugendliche lernen, ihre eigenen Bedürfnisse zu erkennen und ernst zu nehmen – die Basis für Selbstfürsorge und innere Ruhe.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <Scan className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Wahrnehmung</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Perspektivenwechsel schult Empathie. Wer versteht, wie andere fühlen und denken, kann Konflikte besser lösen und Beziehungen stärken.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Gauge className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Selbstregulation</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Mit Methoden wie GGEE (Gedanke → Gefühl → Entscheidung → Ergebnis) entwickeln Schüler:innen Strategien, um Stress abzubauen und wieder „auf Grün“ zu kommen.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <Heart className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Selbstakzeptanz</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Oktoway fördert ein gesundes Selbstbild: „Ich bin gut, so wie ich bin“ – eine starke Grundlage gegen Leistungsdruck und Selbstzweifel.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Rocket className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Potentialentfaltung</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Die eigenen Stärken erkennen und nutzen – und gleichzeitig konstruktiv mit Schwächen umgehen: So gewinnen Jugendliche Klarheit über ihre Möglichkeiten.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <MessageCircle className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Konfliktmanagement</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Techniken wie aktives Zuhören und Ich-Botschaften helfen, Spannungen respektvoll zu klären und gemeinsam Lösungen zu finden.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Move className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Bewegung</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Körperliche Aktivität wird bewusst genutzt, um Gefühle, Gedanken und Stress in Fluss zu bringen – ein wirksamer Schlüssel zu innerer Balance.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <Unlock className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Blockaden lösen</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Oktoway zeigt Wege, innere Hindernisse zu erkennen, zu bearbeiten und langfristig zu vermeiden – damit Lernen und persönliche Entwicklung leichter gelingen.
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+      <footer className="py-16 bg-gray-100 border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
@@ -172,6 +335,11 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+      <div className="py-4 bg-white border-t">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
+          OKTOWAY Copyright ({new Date().getFullYear()}) - Acht Wege zu ganzheitlicher Stärke
+        </div>
+      </div>
     </main>
   );
 }
