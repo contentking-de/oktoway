@@ -22,7 +22,7 @@ export default function HomePage() {
                 Bevor wir mit anderen in Verbindung treten können, brauchen wir eine gute Verbindung zu uns selbst.
               </p>
               <p className="mt-4 text-lg text-gray-700">
-                Mit Oktoway begleiten wir Schüler:innen dabei, ihre Gefühle bewusst wahrzunehmen, sie zu benennen und konstruktiv mit ihnen umzugehen. Das stärkt nicht nur das Lernen, sondern auch Motivation, Selbstvertrauen und ein wertschätzendes Miteinander.
+                Mit OKTOWAY begleiten wir Schüler:innen dabei, ihre Gefühle bewusst wahrzunehmen, sie zu benennen und konstruktiv mit ihnen umzugehen. Das stärkt nicht nur das Lernen, sondern auch Motivation, Selbstvertrauen und ein wertschätzendes Miteinander.
               </p>
             </div>
             <div className="mt-10 lg:mt-0 flex justify-center lg:justify-end lg:col-span-5">
@@ -43,7 +43,7 @@ export default function HomePage() {
       <section className="py-16 bg-white w-full" id="wege">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Die 8 Wege von Oktoway
+            Die 8 Wege von OKTOWAY
           </h2>
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <Card>
@@ -116,7 +116,7 @@ export default function HomePage() {
                   <li>Lerne deine Gefühle besser kennen und gehe selbstbewusst mit ihnen um.</li>
                   <li>Entdecke, was dich motiviert – und wie du Blockaden überwinden kannst.</li>
                   <li>Stärke deine Konzentration, deinen Umgang mit Stress und deine Fähigkeit, Konflikte zu lösen.</li>
-                  <li>Mit den acht Wegen von Oktoway findest du heraus, wie du dein Potential voll entfalten kannst.</li>
+                  <li>Mit den acht Wegen von OKTOWAY findest du heraus, wie du dein Potential voll entfalten kannst.</li>
                 </ul>
               </CardContent>
             </Card>
@@ -130,7 +130,7 @@ export default function HomePage() {
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
                   <li>Mehr Ruhe und Motivation im Klassenzimmer</li>
-                  <li>Oktoway vermittelt Schüler:innen Fähigkeiten zur Selbstregulation, Achtsamkeit und Konfliktlösung.</li>
+                  <li>OKTOWAY vermittelt Schüler:innen Fähigkeiten zur Selbstregulation, Achtsamkeit und Konfliktlösung.</li>
                   <li>Das sorgt für mehr Klarheit, Konzentration und gegenseitigen Respekt.</li>
                   <li>Lehrkräfte erleben dadurch ein konstruktiveres Lernklima und weniger Störungen im Unterricht.</li>
                   <li>Begleitende Materialien und Übungen machen die Umsetzung leicht und praxisnah.</li>
@@ -148,7 +148,7 @@ export default function HomePage() {
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
                   <li>Starke Kinder – starke Familien</li>
                   <li>Kinder, die ihre Gefühle verstehen und regulieren können, sind selbstbewusster und ausgeglichener.</li>
-                  <li>Oktoway unterstützt Eltern dabei, ihre Kinder auf diesem Weg zu begleiten.</li>
+                  <li>OKTOWAY unterstützt Eltern dabei, ihre Kinder auf diesem Weg zu begleiten.</li>
                   <li>Gemeinsam entsteht ein Umfeld, in dem Lernen, Entwicklung und Zusammenhalt gelingen.</li>
                 </ul>
               </CardContent>
@@ -164,7 +164,7 @@ export default function HomePage() {
               <Info className="h-8 w-8" />
             </div>
             <p className="text-lg text-gray-700">
-              OKTOWAY ist Teil des Gesamtprojekts soziale Prävention an der Realschule des BZM Markdorf und wird von Cornelia Sacotte betrieben, die das Konzept in Eigenregie ausgearbeitet und konzeptioniert hat. Aktuell finden die OKTOWAY-Stunden in Klasse 7 statt. In der Jahrgangsstufe 7 findet neben Suchtpräventionsveranstaltungen von der Caritas auch das neu dazugekommene Oktoway Projekt statt. Am Schuljahresanfang wird in allen 7er Klassen einen Morgen lang das OKTOWAY-Konzept kennengelernt, erfahren und umgesetzt. Danach finden weitere Module des Projektes in den jeweiligen Klassen statt, je nach Bedarf und Thema.
+              OKTOWAY ist Teil des Gesamtprojekts soziale Prävention an der Realschule des BZM Markdorf und wird von Cornelia Sacotte betrieben, die das Konzept in Eigenregie ausgearbeitet und konzeptioniert hat. Aktuell finden die OKTOWAY-Stunden in Klasse 7 statt. In der Jahrgangsstufe 7 findet neben Suchtpräventionsveranstaltungen von der Caritas auch das neu dazugekommene OKTOWAY Projekt statt. Am Schuljahresanfang wird in allen 7er Klassen einen Morgen lang das OKTOWAY-Konzept kennengelernt, erfahren und umgesetzt. Danach finden weitere Module des Projektes in den jeweiligen Klassen statt, je nach Bedarf und Thema.
             </p>
           </div>
         </div>
@@ -222,9 +222,9 @@ export default function HomePage() {
 
       <section className="py-16 bg-white w-full" id="warum">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Warum Oktoway die passende Antwort ist</h2>
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Warum OKTOWAY die passende Antwort ist</h2>
           <p className="mt-4 text-lg text-gray-700">
-            Das Projekt Oktoway – Acht Wege zu ganzheitlicher Stärke setzt genau hier an. Es vermittelt Schritt für Schritt Kompetenzen, die junge Menschen heute dringend brauchen:
+            Das Projekt OKTOWAY – Acht Wege zu ganzheitlicher Stärke setzt genau hier an. Es vermittelt Schritt für Schritt Kompetenzen, die junge Menschen heute dringend brauchen:
           </p>
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
             <Card>
@@ -268,7 +268,7 @@ export default function HomePage() {
                 <CardTitle className="text-lg">Selbstakzeptanz</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Oktoway fördert ein gesundes Selbstbild: „Ich bin gut, so wie ich bin“ – eine starke Grundlage gegen Leistungsdruck und Selbstzweifel.
+                OKTOWAY fördert ein gesundes Selbstbild: „Ich bin gut, so wie ich bin“ – eine starke Grundlage gegen Leistungsdruck und Selbstzweifel.
               </CardContent>
             </Card>
             <Card>
@@ -312,7 +312,7 @@ export default function HomePage() {
                 <CardTitle className="text-lg">Blockaden lösen</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Oktoway zeigt Wege, innere Hindernisse zu erkennen, zu bearbeiten und langfristig zu vermeiden – damit Lernen und persönliche Entwicklung leichter gelingen.
+                OKTOWAY zeigt Wege, innere Hindernisse zu erkennen, zu bearbeiten und langfristig zu vermeiden – damit Lernen und persönliche Entwicklung leichter gelingen.
               </CardContent>
             </Card>
           </div>
@@ -364,7 +364,7 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-gray-700">
-                Oktoway stärkt Schüler:innen in Achtsamkeit, Selbstregulation und Konfliktlösung –
+                OKTOWAY stärkt Schüler:innen in Achtsamkeit, Selbstregulation und Konfliktlösung –
                 mit praxisnahen Materialien und viel Herzblut für eine wertschätzende Lernkultur.
               </p>
             </div>
@@ -433,7 +433,7 @@ export default function HomePage() {
                       <p><strong>1. Verantwortliche Stelle</strong></p>
                       <p className="mt-1">Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze ist:</p>
                       <p className="mt-1">
-                        Projekt Oktoway<br />
+                        Projekt OKTOWAY<br />
                         Cornelia Sacotte<br />
                         Lichtenbergstrasse 41<br />
                         88677 Markdorf, Deutschland<br />
@@ -443,7 +443,7 @@ export default function HomePage() {
                     <div>
                       <p><strong>2. Zweck und Art der Webseite</strong></p>
                       <p className="mt-1">
-                        Die Webseite <a href="https://oktoway.de" className="underline">https://oktoway.de</a> dient ausschließlich der Information über das nicht-kommerzielle Bildungsprojekt „Oktoway“.
+                        Die Webseite <a href="https://oktoway.de" className="underline">https://oktoway.de</a> dient ausschließlich der Information über das nicht-kommerzielle Bildungsprojekt „OKTOWAY“.
                         Es werden keine Produkte oder Dienstleistungen verkauft, es findet keine Online-Werbung statt.
                       </p>
                     </div>
