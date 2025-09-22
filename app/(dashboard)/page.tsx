@@ -318,6 +318,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section className="py-16 bg-white w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            Warum OKTOWAY – und warum ein Oktopus?
+          </h2>
+          <p className="mt-4 text-lg text-gray-700">
+            Der Oktopus gilt als eines der klügsten Tiere der Welt: Er passt sich schnell an neue Situationen an, löst Probleme kreativ und bleibt dabei flexibel. Genau diese Fähigkeiten fördern wir mit OKTOWAY. Unsere acht Wege stehen – wie die acht Arme des Oktopus – für acht Kompetenzen, die Schülerinnen und Schüler stark machen. So wird der Oktopus zum Sinnbild für Anpassungsfähigkeit, Klarheit und Ganzheit – und OKTOWAY zum Weg, diese Stärke im Schulalltag zu leben.
+          </p>
+        </div>
+      </section>
       <footer className="py-16 bg-gray-100 border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
