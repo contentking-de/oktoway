@@ -160,11 +160,11 @@ export default function HomePage() {
       <section className="py-12 bg-white w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-start gap-3">
-            <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center shrink-0">
-              <Info className="h-5 w-5" />
+            <div className="h-16 w-16 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center shrink-0">
+              <Info className="h-8 w-8" />
             </div>
             <p className="text-lg text-gray-700">
-              OKTOWAY ist Teil des Gesamtprojekts soziale Prävention an der Realschule des BZM Markdorf und wird von Cornelia Sacotte betrieben, die das Konzept in Eigenregie ausgearbeitet und konzeptioniert hat. Aktuell finden die OKTOWAY-Stunden in Klasse 7 statt.
+              OKTOWAY ist Teil des Gesamtprojekts soziale Prävention an der Realschule des BZM Markdorf und wird von Cornelia Sacotte betrieben, die das Konzept in Eigenregie ausgearbeitet und konzeptioniert hat. Aktuell finden die OKTOWAY-Stunden in Klasse 7 statt. In der Jahrgangsstufe 7 findet neben Suchtpräventionsveranstaltungen von der Caritas auch das neu dazugekommene Oktoway Projekt statt. Am Schuljahresanfang wird in allen 7er Klassen einen Morgen lang das OKTOWAY-Konzept kennengelernt, erfahren und umgesetzt. Danach finden weitere Module des Projektes in den jeweiligen Klassen statt, je nach Bedarf und Thema.
             </p>
           </div>
         </div>
