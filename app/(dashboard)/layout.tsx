@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { use, useState, Suspense } from 'react';
+import { use, useState, useEffect, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
-import { Home, LogOut } from 'lucide-react';
+import { Home, LogOut, Menu, X } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -31,12 +31,18 @@ function UserMenu() {
     router.push('/');
   }
 
+  // Attach global event listener consistently; only active for logged-out users
+  useEffect(() => {
+    if (!user) {
+      const handler = () => setIsSignUpInfoOpen(true);
+      window.addEventListener('open-signup-info', handler as EventListener);
+      return () => window.removeEventListener('open-signup-info', handler as EventListener);
+    }
+  }, [user]);
+
   if (!user) {
     return (
       <>
-        <Button className="rounded-full" onClick={() => setIsSignUpInfoOpen(true)}>
-          Registrieren
-        </Button>
         {isSignUpInfoOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true">
             <div className="absolute inset-0 bg-black/50" onClick={() => setIsSignUpInfoOpen(false)} />
@@ -90,17 +96,18 @@ function UserMenu() {
 }
 
 function Header() {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   return (
     <header className="border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image src="/favicon.png" width={80} height={80} alt="OKTOWAY" className="h-20 w-20" />
           <div className="ml-3 leading-tight">
-            <div className="text-5xl font-extrabold leading-none">
+            <div className="text-4xl md:text-5xl font-extrabold leading-none">
               <span className="text-[#006465]">OKTO</span>
               <span className="text-[#f8bd39]">WAY</span>
             </div>
-            <div className="text-sm text-gray-600 mt-0 leading-none">Acht Wege zu ganzheitlicher Stärke</div>
+            <div className="text-xs md:text-sm text-gray-600 mt-0 leading-none">Acht Wege zu ganzheitlicher Stärke</div>
           </div>
         </Link>
         <div className="flex items-center space-x-4">
@@ -111,11 +118,52 @@ function Header() {
             <Link href="/#herausforderungen" className="text-base font-medium text-gray-700 hover:text-gray-900">Herausforderungen</Link>
             <Link href="/#warum" className="text-base font-medium text-gray-700 hover:text-gray-900">Warum OKTOWAY?</Link>
           </nav>
+          <button
+            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100"
+            onClick={() => setIsMobileNavOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu className="h-6 w-6" />
+          </button>
           <Suspense fallback={<div className="h-9" />}>
             <UserMenu />
           </Suspense>
         </div>
       </div>
+      {isMobileNavOpen && (
+        <div className="md:hidden fixed inset-0 z-50">
+          <div className="absolute inset-0 bg-black/50" onClick={() => setIsMobileNavOpen(false)} />
+          <div className="relative bg-white shadow-lg rounded-b-xl p-4">
+            <div className="flex items-center justify-between">
+              <span className="font-semibold text-gray-900">Navigation</span>
+              <button
+                className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100"
+                onClick={() => setIsMobileNavOpen(false)}
+                aria-label="Close menu"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+            <div className="mt-3 grid gap-2">
+              <Link href="/" className="py-2 text-base text-gray-800" onClick={() => setIsMobileNavOpen(false)}>Home</Link>
+              <Link href="/#wege" className="py-2 text-base text-gray-800" onClick={() => setIsMobileNavOpen(false)}>8 Wege</Link>
+              <Link href="/#fuer-wen" className="py-2 text-base text-gray-800" onClick={() => setIsMobileNavOpen(false)}>Für wen?</Link>
+              <Link href="/#herausforderungen" className="py-2 text-base text-gray-800" onClick={() => setIsMobileNavOpen(false)}>Herausforderungen</Link>
+              <Link href="/#warum" className="py-2 text-base text-gray-800" onClick={() => setIsMobileNavOpen(false)}>Warum OKTOWAY?</Link>
+              <button
+                className="mt-2 inline-flex items-center justify-center rounded-full bg-gray-900 text-white px-4 py-2"
+                onClick={() => {
+                  setIsMobileNavOpen(false);
+                  const event = new CustomEvent('open-signup-info');
+                  window.dispatchEvent(event);
+                }}
+              >
+                Registrieren
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
