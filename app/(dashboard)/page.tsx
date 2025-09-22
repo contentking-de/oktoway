@@ -1,8 +1,12 @@
+"use client";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { Eye, Scan, Gauge, Heart, Rocket, MessageCircle, Move, Unlock, Users, GraduationCap, Home } from 'lucide-react';
+import { useState } from 'react';
+import { Eye, Scan, Gauge, Heart, Rocket, MessageCircle, Move, Unlock, Users, GraduationCap, Home, Info } from 'lucide-react';
 
 export default function HomePage() {
+  const [openModal, setOpenModal] = useState<null | 'impressum' | 'datenschutz' | 'kontakt'>(null);
   return (
     <main>
       <section className="py-20" id="hero">
@@ -149,6 +153,19 @@ export default function HomePage() {
                 </ul>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-start gap-3">
+            <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center shrink-0">
+              <Info className="h-5 w-5" />
+            </div>
+            <p className="text-lg text-gray-700">
+              OKTOWAY ist Teil des Gesamtprojekts soziale Prävention an der Realschule des BZM Markdorf und wird von Cornelia Sacotte betrieben, die das Konzept in Eigenregie ausgearbeitet und konzeptioniert hat. Aktuell finden die OKTOWAY-Stunden in Klasse 7 statt.
+            </p>
           </div>
         </div>
       </section>
@@ -306,10 +323,33 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <ul className="space-y-3">
-                <li><a href="/impressum" className="text-gray-700 hover:text-gray-900">Impressum</a></li>
-                <li><a href="/datenschutz" className="text-gray-700 hover:text-gray-900">Datenschutz</a></li>
-                <li><a href="/agb" className="text-gray-700 hover:text-gray-900">AGB</a></li>
-                <li><a href="/kontakt" className="text-gray-700 hover:text-gray-900">Kontakt</a></li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => setOpenModal('impressum')}
+                    className="text-gray-700 hover:text-gray-900"
+                  >
+                    Impressum
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => setOpenModal('datenschutz')}
+                    className="text-gray-700 hover:text-gray-900"
+                  >
+                    Datenschutz
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => setOpenModal('kontakt')}
+                    className="text-gray-700 hover:text-gray-900"
+                  >
+                    Kontakt
+                  </button>
+                </li>
               </ul>
             </div>
             <div>
@@ -327,14 +367,150 @@ export default function HomePage() {
               </address>
             </div>
             <div>
-              <p className="text-gray-700">
-                Interessiert, aber noch Fragen? Dann nimm Kontakt mit uns auf.
-              </p>
-              <a href="/kontakt" className="inline-block mt-4 text-primary hover:underline">Kontakt</a>
+              <div className="flex items-center">
+                <Image src="/favicon.png" alt="OKTOWAY" width={64} height={64} className="h-16 w-16" />
+                <div className="ml-3 leading-tight">
+                  <div className="text-2xl font-extrabold leading-none">
+                    <span className="text-[#006465]">OKTO</span>
+                    <span className="text-[#f8bd39]">WAY</span>
+                  </div>
+                  <div className="text-sm text-gray-600 mt-0 leading-none">Acht Wege zu ganzheitlicher Stärke</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </footer>
+      {openModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true">
+          <div className="absolute inset-0 bg-black/50" onClick={() => setOpenModal(null)} />
+          <div className="relative bg-white rounded-xl shadow-xl max-w-2xl w-full p-6 max-h-[80vh] overflow-y-auto">
+            <div className="flex items-start justify-between gap-4">
+              <h3 className="text-xl font-semibold text-gray-900">
+                {openModal === 'impressum' && 'Impressum'}
+                {openModal === 'datenschutz' && 'Datenschutz'}
+                {openModal === 'kontakt' && 'Kontakt'}
+              </h3>
+              <Button variant="ghost" onClick={() => setOpenModal(null)}>
+                Schließen
+              </Button>
+            </div>
+            <div className="mt-4 text-gray-700 space-y-3">
+              {openModal === 'impressum' && (
+                <div>
+                  <p><strong>Verantwortlich:</strong></p>
+                  <p>
+                    Cornelia Sacotte<br />
+                    Lichtenbergstrasse 41<br />
+                    88677 Markdorf<br />
+                    Deutschland
+                  </p>
+                  <p className="mt-3">
+                    Es handelt sich hierbei um ein nicht-kommerzielles Projekt, welches ein reines Informationsangebot an Schüler, Lehrer und Eltern darstellt. Das projekt wird nicht online oder außerhalb der Schule beworben.
+                  </p>
+                  <p className="mt-3">
+                    Inhaltlich verantwortlich i.S.v. § 18 Abs. 2 MStV: Cornelia Sacotte, Am Lichtenbergstrasse 41, 88677 Markdorf
+                  </p>
+                  <p className="mt-3">
+                    Wir sind nicht bereit und nicht verpflichtet, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                  </p>
+                </div>
+              )}
+              {openModal === 'datenschutz' && (
+                <div>
+                  <div className="space-y-4">
+                    <div>
+                      <p><strong>1. Verantwortliche Stelle</strong></p>
+                      <p className="mt-1">Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze ist:</p>
+                      <p className="mt-1">
+                        Projekt Oktoway<br />
+                        Cornelia Sacotte<br />
+                        Lichtenbergstrasse 41<br />
+                        88677 Markdorf, Deutschland<br />
+                        E-Mail: <a className="underline" href="mailto:info@oktoway.de">info@oktoway.de</a>
+                      </p>
+                    </div>
+                    <div>
+                      <p><strong>2. Zweck und Art der Webseite</strong></p>
+                      <p className="mt-1">
+                        Die Webseite <a href="https://oktoway.de" className="underline">https://oktoway.de</a> dient ausschließlich der Information über das nicht-kommerzielle Bildungsprojekt „Oktoway“.
+                        Es werden keine Produkte oder Dienstleistungen verkauft, es findet keine Online-Werbung statt.
+                      </p>
+                    </div>
+                    <div>
+                      <p><strong>3. Erhebung und Speicherung personenbezogener Daten</strong></p>
+                      <p className="mt-1">
+                        Beim Aufrufen unserer Webseite werden durch den Webserver automatisch einige technische Informationen (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, Browsertyp, Betriebssystem) übermittelt.
+                        Diese Daten werden ausschließlich temporär in sogenannten Logfiles gespeichert, um den sicheren Betrieb der Webseite zu gewährleisten.
+                        Eine Auswertung zu Marketingzwecken findet nicht statt.
+                      </p>
+                    </div>
+                    <div>
+                      <p><strong>4. Keine Cookies & kein Tracking</strong></p>
+                      <p className="mt-1">Auf dieser Webseite werden keine Cookies gesetzt, die der Analyse des Nutzerverhaltens dienen.</p>
+                      <p className="mt-1">Es wird kein Tracking (wie z. B. Google Analytics, Matomo o. ä.) verwendet.</p>
+                      <p className="mt-1">Es werden keine Social-Media-Plugins eingebunden.</p>
+                    </div>
+                    <div>
+                      <p><strong>5. Kommunikation per E-Mail</strong></p>
+                      <p className="mt-1">
+                        Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen freiwillig übermittelten Daten (z. B. Name, E-Mail-Adresse, Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.
+                        Diese Daten werden nicht an Dritte weitergegeben, sofern keine gesetzliche Pflicht besteht.
+                      </p>
+                    </div>
+                    <div>
+                      <p><strong>6. Rechtsgrundlagen der Verarbeitung</strong></p>
+                      <p className="mt-1">Rechtsgrundlagen für die vorübergehende Speicherung der technischen Daten sind</p>
+                      <p className="mt-1">Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Webseite) und</p>
+                      <p className="mt-1">bei E-Mail-Kontakt Art. 6 Abs. 1 lit. b DSGVO (Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen).</p>
+                    </div>
+                    <div>
+                      <p><strong>7. Dauer der Speicherung</strong></p>
+                      <p className="mt-1">Server-Logfiles werden in der Regel nach spätestens 7 Tagen automatisch gelöscht.</p>
+                      <p className="mt-1">E-Mail-Daten werden nur so lange gespeichert, wie es zur Bearbeitung der Anfrage notwendig ist.</p>
+                    </div>
+                    <div>
+                      <p><strong>8. Ihre Rechte</strong></p>
+                      <p className="mt-1">Sie haben nach der DSGVO folgende Rechte:</p>
+                      <ul className="list-disc pl-5 mt-1 space-y-1">
+                        <li>Auskunft über die bei uns gespeicherten Daten (Art. 15 DSGVO)</li>
+                        <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+                        <li>Löschung („Recht auf Vergessenwerden“, Art. 17 DSGVO)</li>
+                        <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+                        <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+                        <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+                      </ul>
+                      <p className="mt-1">
+                        Zur Ausübung dieser Rechte können Sie sich jederzeit an die oben genannte verantwortliche Stelle wenden.
+                        Darüber hinaus steht Ihnen ein Beschwerderecht bei der zuständigen Datenschutzaufsichtsbehörde zu.
+                      </p>
+                    </div>
+                    <div>
+                      <p><strong>9. Sicherheit</strong></p>
+                      <p className="mt-1">Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre Daten vor unbefugtem Zugriff zu schützen.</p>
+                    </div>
+                    <div>
+                      <p><strong>10. Aktualität und Änderung dieser Datenschutzerklärung</strong></p>
+                      <p className="mt-1">
+                        Diese Datenschutzerklärung ist aktuell gültig (Stand: September 2025).
+                        Wir behalten uns vor, sie bei Bedarf anzupassen, um sie an geänderte rechtliche Anforderungen oder bei Änderungen des Angebots anzupassen.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {openModal === 'kontakt' && (
+                <div>
+                  <p>Schreiben Sie uns gerne eine Nachricht.</p>
+                  <p>
+                    E-Mail: <a className="underline" href="mailto:info@oktoway.de">info@oktoway.de</a>
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
       <div className="py-4 bg-white border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
           OKTOWAY Copyright ({new Date().getFullYear()}) - Acht Wege zu ganzheitlicher Stärke
