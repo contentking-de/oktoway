@@ -5,8 +5,9 @@ import { getUser, getTeamForUser } from '@/lib/db/queries';
 import { SWRConfig } from 'swr';
 
 export const metadata: Metadata = {
-  title: 'Next.js SaaS Starter',
-  description: 'Get started quickly with Next.js, Postgres, and Stripe.'
+  title: 'OKTOWAY – Acht Wege zu ganzheitlicher Stärke',
+  description:
+    'OKTOWAY begleitet Schüler:innen, Lehrkräfte und Eltern dabei, Gefühle bewusst wahrzunehmen, zu benennen und konstruktiv zu nutzen – für Motivation, Konzentration und ein wertschätzendes Lernklima.'
 };
 
 export const viewport: Viewport = {
