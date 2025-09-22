@@ -50,49 +50,49 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle className="text-lg">Achtsamkeit</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Bedürfnisse erkennen und annehmen</CardContent>
+              <CardContent className="text-gray-700">Bedürfnisse erkennen und annehmen ist der beste Weg zu mehr Achtsamkeit</CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Wahrnehmung</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Perspektiven wechseln lernen</CardContent>
+              <CardContent className="text-gray-700">Perspektiven wechseln lernen stärkt Empathie und Klarheit in der Wahrnehmung</CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Selbstregulation</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">innere Balance finden</CardContent>
+              <CardContent className="text-gray-700">Innere Balance finden gelingt durch bewusste Selbstregulation im Alltag</CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Selbstakzeptanz</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">sich selbst annehmen</CardContent>
+              <CardContent className="text-gray-700">Sich selbst annehmen bildet die Basis für Selbstvertrauen und Gelassenheit</CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Potentialentfaltung</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Stärken nutzen, Schwächen verstehen</CardContent>
+              <CardContent className="text-gray-700">Stärken nutzen und Schwächen verstehen öffnet Räume für echte Potentialentfaltung</CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Konfliktmanagement</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">zuhören, klar kommunizieren</CardContent>
+              <CardContent className="text-gray-700">Zuhören und klar kommunizieren lässt Konflikte konstruktiv und respektvoll lösen</CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Bewegung</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Energie in Fluss bringen, Ruhe finden</CardContent>
+              <CardContent className="text-gray-700">Bewegung bringt Energie in Fluss und führt zu mehr innerer Ruhe</CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Blockaden lösen</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Hindernisse erkennen und überwinden</CardContent>
+              <CardContent className="text-gray-700">Hindernisse erkennen und überwinden macht den Weg frei für Lernen und Entwicklung</CardContent>
             </Card>
           </div>
         </div>
