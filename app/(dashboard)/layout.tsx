@@ -21,6 +21,7 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 function UserMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSignUpInfoOpen, setIsSignUpInfoOpen] = useState(false);
   const { data: user } = useSWR<User>('/api/user', fetcher);
   const router = useRouter();
 
@@ -33,9 +34,24 @@ function UserMenu() {
   if (!user) {
     return (
       <>
-        <Button asChild className="rounded-full">
-          <Link href="/sign-up">Sign Up</Link>
+        <Button className="rounded-full" onClick={() => setIsSignUpInfoOpen(true)}>
+          Registrieren
         </Button>
+        {isSignUpInfoOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true">
+            <div className="absolute inset-0 bg-black/50" onClick={() => setIsSignUpInfoOpen(false)} />
+            <div className="relative bg-white rounded-xl shadow-xl max-w-md w-full p-6">
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-xl font-semibold text-gray-900">Coming soon...</h3>
+                <Button variant="ghost" onClick={() => setIsSignUpInfoOpen(false)}>Schließen</Button>
+              </div>
+              <div className="mt-3 text-gray-700 space-y-2">
+                <p>Unser Lehrer-Bereich befindet sich im Aufbau.</p>
+                <p>In Kürze können hier die OKTOWAY Schulungsunterlagen eingesehen und herunter geladen werden.</p>
+              </div>
+            </div>
+          </div>
+        )}
       </>
     );
   }
