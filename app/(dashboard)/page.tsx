@@ -416,10 +416,10 @@ export default function HomePage() {
                     Deutschland
                   </p>
                   <p className="mt-3">
-                    Es handelt sich hierbei um ein nicht-kommerzielles Projekt, welches ein reines Informationsangebot an Schüler, Lehrer und Eltern darstellt. Das projekt wird nicht online oder außerhalb der Schule beworben.
+                    Es handelt sich hierbei um ein nicht-kommerzielles Projekt, welches ein reines Informationsangebot an Schüler, Lehrer und Eltern darstellt. Das Projekt wird nicht online oder außerhalb der Schule beworben.
                   </p>
                   <p className="mt-3">
-                    Inhaltlich verantwortlich i.S.v. § 18 Abs. 2 MStV: Cornelia Sacotte, Am Lichtenbergstrasse 41, 88677 Markdorf
+                    Inhaltlich verantwortlich i.S.v. § 18 Abs. 2 MStV: Cornelia Sacotte, Lichtenbergstrasse 41, 88677 Markdorf
                   </p>
                   <p className="mt-3">
                     Wir sind nicht bereit und nicht verpflichtet, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
