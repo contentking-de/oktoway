@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oktoway.de/sitemap.xml
