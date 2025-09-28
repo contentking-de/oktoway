@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import { Manrope } from 'next/font/google';
 import { getUser, getTeamForUser } from '@/lib/db/queries';
 import { SWRConfig } from 'swr';
+import CookieConsent from '@/components/cookie-consent';
 
 export const metadata: Metadata = {
   title: 'OKTOWAY – Acht Wege zu ganzheitlicher Stärke',
@@ -39,6 +40,7 @@ export default function RootLayout({
         >
           {children}
         </SWRConfig>
+        <CookieConsent />
       </body>
     </html>
   );
