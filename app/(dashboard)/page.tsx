@@ -235,7 +235,7 @@ export default function HomePage() {
                 <CardTitle className="text-lg">Achtsamkeit</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Jugendliche lernen, ihre eigenen Bedürfnisse zu erkennen und ernst zu nehmen – die Basis für Selbstfürsorge und innere Ruhe.
+                Jugendliche lernen, ihre eigenen Bedürfnisse zu erkennen und ernst zu nehmen – die Basis für Selbstfürsorge und innere Ruhe. (Atmentechniken, Stille)
               </CardContent>
             </Card>
             <Card>
@@ -246,7 +246,7 @@ export default function HomePage() {
                 <CardTitle className="text-lg">Wahrnehmung</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Perspektivenwechsel schult Empathie. Wer versteht, wie andere fühlen und denken, kann Konflikte besser lösen und Beziehungen stärken.
+                Perspektivenwechsel schult Empathie. Wer versteht, wie andere fühlen und denken, kann Konflikte besser lösen und Beziehungen stärken. (Eisbergmodell/ Meine Welt - deine Welt)
               </CardContent>
             </Card>
             <Card>
@@ -257,7 +257,7 @@ export default function HomePage() {
                 <CardTitle className="text-lg">Selbstregulation</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Mit Methoden wie GGEE (Gedanke → Gefühl → Entscheidung → Ergebnis) entwickeln Schüler:innen Strategien, um Stress abzubauen und wieder „auf Grün“ zu kommen.
+                Schüler:innen entwickeln Strategien, um in Stresssituationen von „rot“ wieder „auf Grün“ zu kommen. Mit Methoden wie z.B. GGEE (Gedanke → Gefühl → Entscheidung → Ergebnis) oder ABS lernen die Jugendlichen wieder in einen guten Zustand zu kommen.
               </CardContent>
             </Card>
             <Card>
@@ -279,7 +279,7 @@ export default function HomePage() {
                 <CardTitle className="text-lg">Potentialentfaltung</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Die eigenen Stärken erkennen und nutzen – und gleichzeitig konstruktiv mit Schwächen umgehen: So gewinnen Jugendliche Klarheit über ihre Möglichkeiten.
+                Die eigenen Stärken erkennen und nutzen – und gleichzeitig konstruktiv mit Schwächen umgehen. Durch Spiele wie „Fehlerfreude“ oder „0-5“ öffnen sich neue Wege im Umgang mit Versagensängsten und sie erfahren und lernen dadurch, wieder besser zu fokussieren.
               </CardContent>
             </Card>
             <Card>
@@ -301,7 +301,7 @@ export default function HomePage() {
                 <CardTitle className="text-lg">Bewegung</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Körperliche Aktivität wird bewusst genutzt, um Gefühle, Gedanken und Stress in Fluss zu bringen – ein wirksamer Schlüssel zu innerer Balance.
+                Körperliche Aktivität wird bewusst genutzt, um Gefühle, Gedanken und Stress in Fluss zu bringen – ein wirksamer Schlüssel zu innerer Balance. (Rechte und linke Gehirnhälften gleichzeitig aktivieren)
               </CardContent>
             </Card>
             <Card>
@@ -312,7 +312,7 @@ export default function HomePage() {
                 <CardTitle className="text-lg">Blockaden lösen</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                OKTOWAY zeigt Wege, innere Hindernisse zu erkennen, zu bearbeiten und langfristig zu vermeiden – damit Lernen und persönliche Entwicklung leichter gelingen.
+                OKTOWAY zeigt Wege, innere Hindernisse zu erkennen, zu bearbeiten und langfristig zu vermeiden – damit Lernen und persönliche Entwicklung leichter gelingen. (Blackout Situationen z.B. in einer Klassenarbeit beheben oder bestenfalls verhindern können)
               </CardContent>
             </Card>
           </div>
