@@ -101,7 +101,7 @@ function Header() {
     <header className="border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <Image src="/favicon.png" width={80} height={80} alt="OKTOWAY" className="h-20 w-20" />
+          <Image src="/oktoway-smile.png" width={80} height={80} alt="OKTOWAY" className="h-20 w-20" />
           <div className="ml-3 leading-tight">
             <div className="text-4xl md:text-5xl font-extrabold leading-none">
               <span className="text-[#006465]">OKTO</span>

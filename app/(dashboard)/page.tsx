@@ -27,7 +27,7 @@ export default function HomePage() {
             </div>
             <div className="mt-10 lg:mt-0 flex justify-center lg:justify-end lg:col-span-5">
               <Image
-                src="/favicon.png"
+                src="/oktoway-smile.png"
                 width={320}
                 height={320}
                 alt="OKTOWAY"
@@ -378,7 +378,7 @@ export default function HomePage() {
             </div>
             <div>
               <div className="flex items-center">
-                <Image src="/favicon.png" alt="OKTOWAY" width={64} height={64} className="h-16 w-16" />
+                <Image src="/oktoway-smile.png" alt="OKTOWAY" width={64} height={64} className="h-16 w-16" />
                 <div className="ml-3 leading-tight">
                   <div className="text-2xl font-extrabold leading-none">
                     <span className="text-[#006465]">OKTO</span>
