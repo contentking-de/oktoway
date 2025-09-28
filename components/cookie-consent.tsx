@@ -31,7 +31,13 @@ export default function CookieConsent() {
   useEffect(() => {
     setIsMounted(true);
     const existing = readCookie(CONSENT_COOKIE_NAME);
-    setShowBanner(!existing);
+    try {
+      const url = new URL(window.location.href);
+      const forceShow = url.searchParams.get('showConsent') === '1';
+      setShowBanner(forceShow || !existing);
+    } catch {
+      setShowBanner(!existing);
+    }
   }, []);
 
   function handleAccept() {
@@ -92,10 +98,10 @@ export default function CookieConsent() {
 
       <button
         type="button"
-        aria-label="Cookie-Einstellungen"
+        aria-label="Einstellungen"
         onClick={() => setShowBanner(true)}
         className="fixed bottom-4 right-4 z-50 h-12 w-12 rounded-full bg-gray-900 text-white shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-        title="Cookie-Einstellungen"
+        title="Einstellungen"
       >
         <CookieIcon className="h-6 w-6 mx-auto" aria-hidden />
       </button>
