@@ -2,13 +2,28 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Eye, Scan, Gauge, Heart, Rocket, MessageCircle, Move, Unlock, Users, GraduationCap, Home, Info } from 'lucide-react';
 
 export default function HomePage() {
   const [openModal, setOpenModal] = useState<null | 'impressum' | 'datenschutz' | 'kontakt'>(null);
+  
+  useEffect(() => {
+    // Open Datenschutz modal when arriving with #datenschutz
+    if (typeof window !== 'undefined' && window.location.hash === '#datenschutz') {
+      setOpenModal('datenschutz');
+    }
+    const handler = () => setOpenModal('datenschutz');
+    window.addEventListener('open-datenschutz', handler as EventListener);
+    return () => window.removeEventListener('open-datenschutz', handler as EventListener);
+  }, []);
   return (
     <main>
+      {/* Open Datenschutz modal if hash present or custom event fired */}
+      {/**/}
+      {/**/}
+      
+      
       <section className="py-20" id="hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
