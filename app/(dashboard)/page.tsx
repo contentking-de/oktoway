@@ -163,7 +163,8 @@ export default function HomePage() {
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
                   <li>Starke Kinder – starke Familien</li>
                   <li>Kinder, die ihre Gefühle verstehen und regulieren können, sind selbstbewusster und ausgeglichener.</li>
-                  <li>OKTOWAY unterstützt Eltern dabei, ihre Kinder auf diesem Weg zu begleiten.</li>
+                  <li>Einblicke in die 8 Wege von OKTOWAY und wie Eltern diese im Alltag begleiten können.</li>
+                  <li>Transparenz über Ablauf, Inhalte und Ziele des Programms werden im Elternabend kommuniziert und erklärt.</li>
                   <li>Gemeinsam entsteht ein Umfeld, in dem Lernen, Entwicklung und Zusammenhalt gelingen.</li>
                 </ul>
               </CardContent>
@@ -179,7 +180,7 @@ export default function HomePage() {
               <Info className="h-8 w-8" />
             </div>
             <p className="text-lg text-gray-700">
-              OKTOWAY ist Teil des Gesamtprojekts soziale Prävention an der Realschule des BZM Markdorf und wird von Cornelia Sacotte betrieben, die das Konzept in Eigenregie ausgearbeitet und konzeptioniert hat. Aktuell finden die OKTOWAY-Stunden in Klasse 7 statt. In der Jahrgangsstufe 7 findet neben Suchtpräventionsveranstaltungen von der Caritas auch das neu dazugekommene OKTOWAY Projekt statt. Am Schuljahresanfang wird in allen 7er Klassen einen Morgen lang das OKTOWAY-Konzept kennengelernt, erfahren und umgesetzt. Danach finden weitere Module des Projektes in den jeweiligen Klassen statt, je nach Bedarf und Thema.
+              OKTOWAY ist Teil des Gesamtprojekts <strong>Prävention und Gesundheitsförderung durch Selbstregulation</strong> und wird von Cornelia Sacotte betrieben, die das Konzept in Eigenregie ausgearbeitet und konzeptioniert hat. Aktuell finden die OKTOWAY-Stunden in Klasse 7 statt. In der Jahrgangsstufe 7 findet neben Suchtpräventionsveranstaltungen von der Caritas auch das neu dazugekommene OKTOWAY Projekt statt. Am Schuljahresanfang wird in allen 7er Klassen einen Morgen lang das OKTOWAY-Konzept kennengelernt, erfahren und umgesetzt. Danach finden weitere Module des Projektes in den jeweiligen Klassen statt, je nach Bedarf und Thema.
             </p>
           </div>
         </div>
