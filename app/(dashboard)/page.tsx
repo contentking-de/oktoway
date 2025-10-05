@@ -386,6 +386,7 @@ export default function HomePage() {
             </div>
             <div>
               <address className="not-italic text-gray-700">
+                Realschule am BZM Markdorf<br />
                 Cornelia Sacotte<br />
                 Lichtenbergstrasse 41<br />
                 88677 Markdorf<br />
