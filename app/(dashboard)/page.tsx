@@ -164,8 +164,8 @@ export default function HomePage() {
                   <li>Starke Kinder – starke Familien</li>
                   <li>Kinder, die ihre Gefühle verstehen und regulieren können, sind selbstbewusster und ausgeglichener.</li>
                   <li>Einblicke in die 8 Wege von OKTOWAY und wie Eltern diese im Alltag begleiten können.</li>
-                  <li>Transparenz über Ablauf, Inhalte und Ziele des Programms werden im Elternabend kommuniziert und erklärt.</li>
-                  <li>Gemeinsam entsteht ein Umfeld, in dem Lernen, Entwicklung und Zusammenhalt gelingen.</li>
+                  <li>Transparenz über Ablauf, Inhalte und Ziele des Programms werden am Elternabend kommuniziert und erklärt.</li>
+                  <li>Gemeinsam entsteht ein Umfeld, in dem Lernen, Entwicklung und Zusammenhalt besser gelingen können.</li>
                 </ul>
               </CardContent>
             </Card>
