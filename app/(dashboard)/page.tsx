@@ -144,7 +144,6 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                  <li>Mehr Ruhe und Motivation im Klassenzimmer</li>
                   <li>OKTOWAY vermittelt Schüler:innen Fähigkeiten zur Selbstregulation, Achtsamkeit und Konfliktlösung.</li>
                   <li>Das sorgt für mehr Klarheit, Konzentration und gegenseitigen Respekt.</li>
                   <li>Lehrkräfte erleben dadurch ein konstruktiveres Lernklima und weniger Störungen im Unterricht.</li>
@@ -163,8 +162,8 @@ export default function HomePage() {
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
                   <li>Starke Kinder – starke Familien</li>
                   <li>Kinder, die ihre Gefühle verstehen und regulieren können, sind selbstbewusster und ausgeglichener.</li>
-                  <li>Einblicke in die 8 Wege von OKTOWAY und wie Eltern diese im Alltag begleiten können.</li>
-                  <li>Transparenz über Ablauf, Inhalte und Ziele des Programms werden am Elternabend kommuniziert und erklärt.</li>
+                  <li>Einblicke in die 8 Wege von OKTOWAY erhalten die Eltern momentan über die Webseite.</li>
+                  <li>Weitere Informationskanäle sind in Arbeit.</li>
                   <li>Gemeinsam entsteht ein Umfeld, in dem Lernen, Entwicklung und Zusammenhalt besser gelingen können.</li>
                 </ul>
               </CardContent>
@@ -273,7 +272,7 @@ export default function HomePage() {
                 <CardTitle className="text-lg">Selbstregulation</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Schüler:innen entwickeln Strategien, um in Stresssituationen von „rot“ wieder „auf Grün“ zu kommen. Mit Methoden wie z.B. GGEE (Gedanke → Gefühl → Entscheidung → Ergebnis) oder ABS lernen die Jugendlichen wieder in einen guten Zustand zu kommen.
+                Schüler:innen entwickeln Strategien, um in Stresssituationen von „rot“ wieder „auf Grün“ zu kommen. Unterschiedlichste Methoden und Werkzeuge können individuell ausprobiert und an die eigenen Bedürfnisse angepasst werden.
               </CardContent>
             </Card>
             <Card>
