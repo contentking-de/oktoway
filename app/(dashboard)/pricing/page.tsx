@@ -3,6 +3,8 @@ import { Check } from 'lucide-react';
 import { getStripePrices, getStripeProducts } from '@/lib/payments/stripe';
 import { SubmitButton } from './submit-button';
 
+export const dynamic = 'force-dynamic';
+
 export default async function PricingPage() {
   const [prices, products] = await Promise.all([
     getStripePrices(),
