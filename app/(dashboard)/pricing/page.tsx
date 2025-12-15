@@ -1,21 +1,43 @@
+'use client';
+
 import { checkoutAction } from '@/lib/payments/actions';
 import { Check } from 'lucide-react';
-import { getStripePrices, getStripeProducts } from '@/lib/payments/stripe';
 import { SubmitButton } from './submit-button';
+import useSWR from 'swr';
 
-export const dynamic = 'force-dynamic';
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-export default async function PricingPage() {
-  const [prices, products] = await Promise.all([
-    getStripePrices(),
-    getStripeProducts(),
-  ]);
+export default function PricingPage() {
+  const { data: pricesData, isLoading: pricesLoading } = useSWR('/api/stripe/prices', fetcher);
+  const { data: productsData, isLoading: productsLoading } = useSWR('/api/stripe/products', fetcher);
 
-  const basePlan = products.find((product) => product.name === 'Base');
-  const plusPlan = products.find((product) => product.name === 'Plus');
+  if (pricesLoading || productsLoading) {
+    return (
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid md:grid-cols-2 gap-8 max-w-xl mx-auto">
+          <div className="pt-6">
+            <div className="h-8 bg-gray-200 rounded w-32 mb-4 animate-pulse" />
+            <div className="h-6 bg-gray-200 rounded w-24 mb-6 animate-pulse" />
+            <div className="h-12 bg-gray-200 rounded w-40 mb-8 animate-pulse" />
+          </div>
+          <div className="pt-6">
+            <div className="h-8 bg-gray-200 rounded w-32 mb-4 animate-pulse" />
+            <div className="h-6 bg-gray-200 rounded w-24 mb-6 animate-pulse" />
+            <div className="h-12 bg-gray-200 rounded w-40 mb-8 animate-pulse" />
+          </div>
+        </div>
+      </main>
+    );
+  }
 
-  const basePrice = prices.find((price) => price.productId === basePlan?.id);
-  const plusPrice = prices.find((price) => price.productId === plusPlan?.id);
+  const prices = pricesData || [];
+  const products = productsData || [];
+
+  const basePlan = products.find((product: { name: string }) => product.name === 'Base');
+  const plusPlan = products.find((product: { name: string }) => product.name === 'Plus');
+
+  const basePrice = prices.find((price: { productId: string }) => price.productId === basePlan?.id);
+  const plusPrice = prices.find((price: { productId: string }) => price.productId === plusPlan?.id);
 
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
