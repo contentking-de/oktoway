@@ -7,8 +7,12 @@ import { Eye, Scan, Gauge, Heart, Rocket, MessageCircle, Move, Unlock, Users, Gr
 
 export default function HomePage() {
   const [openModal, setOpenModal] = useState<null | 'impressum' | 'datenschutz' | 'kontakt'>(null);
+  const [currentYear, setCurrentYear] = useState<number>(2025);
   
   useEffect(() => {
+    // Set current year client-side only
+    setCurrentYear(new Date().getFullYear());
+    
     // Open Datenschutz modal when arriving with #datenschutz
     if (typeof window !== 'undefined' && window.location.hash === '#datenschutz') {
       setOpenModal('datenschutz');
@@ -538,7 +542,7 @@ export default function HomePage() {
       )}
       <div className="py-4 bg-white border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
-          OKTOWAY Copyright ({new Date().getFullYear()}) - Acht Wege zu ganzheitlicher Stärke
+          OKTOWAY Copyright ({currentYear}) - Acht Wege zu ganzheitlicher Stärke
         </div>
       </div>
     </main>
