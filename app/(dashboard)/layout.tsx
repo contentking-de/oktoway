@@ -107,7 +107,7 @@ function Header() {
               <span className="text-[#006465]">OKTO</span>
               <span className="text-[#f8bd39]">WAY</span>
             </div>
-            <div className="text-xs md:text-sm text-gray-600 mt-0 leading-none">Acht Wege zu ganzheitlicher Stärke</div>
+            <div className="text-xs md:text-sm text-gray-600 mt-0 leading-none">8 Wege zur Stärke für dich</div>
           </div>
         </Link>
         <div className="flex items-center space-x-4">
@@ -116,6 +116,7 @@ function Header() {
             <Link href="/#wege" className="text-base font-medium text-gray-700 hover:text-gray-900">8 Wege</Link>
             <Link href="/#fuer-wen" className="text-base font-medium text-gray-700 hover:text-gray-900">Für wen?</Link>
             <Link href="/#herausforderungen" className="text-base font-medium text-gray-700 hover:text-gray-900">Herausforderungen</Link>
+            <Link href="/#erleben" className="text-base font-medium text-gray-700 hover:text-gray-900">Erleben</Link>
             <Link href="/#warum" className="text-base font-medium text-gray-700 hover:text-gray-900">Warum OKTOWAY?</Link>
           </nav>
           <button
@@ -149,6 +150,7 @@ function Header() {
               <Link href="/#wege" className="py-2 text-base text-gray-800" onClick={() => setIsMobileNavOpen(false)}>8 Wege</Link>
               <Link href="/#fuer-wen" className="py-2 text-base text-gray-800" onClick={() => setIsMobileNavOpen(false)}>Für wen?</Link>
               <Link href="/#herausforderungen" className="py-2 text-base text-gray-800" onClick={() => setIsMobileNavOpen(false)}>Herausforderungen</Link>
+              <Link href="/#erleben" className="py-2 text-base text-gray-800" onClick={() => setIsMobileNavOpen(false)}>Erleben</Link>
               <Link href="/#warum" className="py-2 text-base text-gray-800" onClick={() => setIsMobileNavOpen(false)}>Warum OKTOWAY?</Link>
               <button
                 className="mt-2 inline-flex items-center justify-center rounded-full bg-gray-900 text-white px-4 py-2"

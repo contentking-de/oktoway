@@ -3,7 +3,34 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { Eye, Scan, Gauge, Heart, Rocket, MessageCircle, Move, Unlock, Users, GraduationCap, Home, Info } from 'lucide-react';
+import {
+  Eye,
+  Scan,
+  Gauge,
+  Heart,
+  Rocket,
+  MessageCircle,
+  Move,
+  Users,
+  GraduationCap,
+  Home,
+  Info,
+  Sparkles,
+  Scale,
+  Flame,
+  Zap,
+  Brain,
+  RefreshCw,
+  HeartHandshake,
+  Layers,
+  Lightbulb,
+  Link2,
+  Mountain,
+  Wrench,
+  MapPin,
+  Play,
+  Backpack
+} from 'lucide-react';
 
 export default function HomePage() {
   const [openModal, setOpenModal] = useState<null | 'impressum' | 'datenschutz' | 'kontakt'>(null);
@@ -31,26 +58,37 @@ export default function HomePage() {
       <section className="py-20" id="hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-            <div className="lg:col-span-7 lg:pr-8">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            <div className="lg:col-span-6 lg:pr-8">
+              <p className="text-sm font-semibold tracking-[0.2em] text-[#006465] uppercase">
+                Entdecken · Verstehen · Wachsen
+              </p>
+              <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                 <span className="bg-gradient-to-r from-[#006465] to-[#f8bd39] bg-clip-text text-transparent">
-                  Acht Wege zu ganzheitlicher Stärke
+                  8 Wege zur Stärke für dich.
                 </span>
               </h1>
-              <p className="mt-6 text-lg text-gray-700 font-bold">
-                Bevor wir mit anderen in Verbindung treten können, brauchen wir eine gute Verbindung zu uns selbst.
+              <p className="mt-6 text-2xl text-gray-900 font-bold">
+                Stärke beginnt bei dir.
               </p>
               <p className="mt-4 text-lg text-gray-700">
-                Mit OKTOWAY begleiten wir Schüler:innen dabei, ihre Gefühle bewusst wahrzunehmen, sie zu benennen und konstruktiv mit ihnen umzugehen. Das stärkt nicht nur das Lernen, sondern auch Motivation, Selbstvertrauen und ein wertschätzendes Miteinander.
+                Bevor wir mit anderen in Verbindung treten können, brauchen wir eine gute Verbindung zu uns selbst.
+                OKTOWAY begleitet Schüler:innen dabei, sich selbst wahrzunehmen, zu verstehen und Schritt für Schritt
+                innerlich stärker zu werden – achtsam, stark, gemeinsam.
+              </p>
+              <p className="mt-6 text-sm font-semibold tracking-[0.18em] text-[#006465] uppercase">
+                Achtsam. Stark. Gemeinsam.
+              </p>
+              <p className="mt-2 text-sm text-gray-600">
+                Für Schüler:innen · Lehrkräfte · Eltern
               </p>
             </div>
-            <div className="mt-10 lg:mt-0 flex justify-center lg:justify-end lg:col-span-5">
+            <div className="mt-10 lg:mt-0 flex justify-center lg:justify-end lg:col-span-6">
               <Image
                 src="/oktoway-smile.png"
-                width={320}
-                height={320}
+                width={560}
+                height={560}
                 alt="OKTOWAY"
-                className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80"
+                className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem]"
               />
             </div>
           </div>
@@ -62,58 +100,91 @@ export default function HomePage() {
       <section className="py-16 bg-white w-full" id="wege">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Die 8 Wege von OKTOWAY
+            8 Wege zur Stärke für dich.
           </h2>
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <p className="mt-3 text-lg text-gray-700">
+            Kleine Schritte. Große Wirkung.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
             <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Achtsamkeit</CardTitle>
+              <CardHeader className="gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Heart className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg whitespace-nowrap">1. Selbstfürsorge</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Bedürfnisse erkennen und annehmen ist der beste Weg zu mehr Achtsamkeit</CardContent>
+              <CardContent className="text-gray-700">Ich gehe achtsam mit meinen Gedanken, Gefühlen und meinem Körper um.</CardContent>
             </Card>
             <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Wahrnehmung</CardTitle>
+              <CardHeader className="gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <Eye className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg whitespace-nowrap">2. Selbstwahrnehmung</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Perspektiven wechseln lernen stärkt Empathie und Klarheit in der Wahrnehmung</CardContent>
+              <CardContent className="text-gray-700">Ich kenne meine Stärken und Schwächen.</CardContent>
             </Card>
             <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Selbstregulation</CardTitle>
+              <CardHeader className="gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Gauge className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg whitespace-nowrap">3. Selbstregulation</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Innere Balance finden gelingt durch bewusste Selbstregulation im Alltag</CardContent>
+              <CardContent className="text-gray-700">Ich kann mich selbst steuern und regulieren.</CardContent>
             </Card>
             <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Selbstakzeptanz</CardTitle>
+              <CardHeader className="gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <Sparkles className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg whitespace-nowrap">4. Selbstakzeptanz</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Sich selbst annehmen bildet die Basis für Selbstvertrauen und Gelassenheit</CardContent>
+              <CardContent className="text-gray-700">Ich akzeptiere mich so, wie ich bin.</CardContent>
             </Card>
             <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Potentialentfaltung</CardTitle>
+              <CardHeader className="gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Rocket className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg whitespace-nowrap">5. Selbstentfaltung</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Stärken nutzen und Schwächen verstehen öffnet Räume für echte Potentialentfaltung</CardContent>
+              <CardContent className="text-gray-700">Ich nutze meine Fähigkeiten und entwickle mich weiter.</CardContent>
             </Card>
             <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Konfliktmanagement</CardTitle>
+              <CardHeader className="gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <Scale className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg whitespace-nowrap">6. Selbstverantwortung</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Zuhören und klar kommunizieren lässt Konflikte konstruktiv und respektvoll lösen</CardContent>
+              <CardContent className="text-gray-700">Ich übernehme Verantwortung für meine Worte und mein Handeln.</CardContent>
             </Card>
             <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Bewegung</CardTitle>
+              <CardHeader className="gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Flame className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg whitespace-nowrap">7. Selbstmotivation</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Bewegung bringt Energie in Fluss und führt zu mehr innerer Ruhe</CardContent>
+              <CardContent className="text-gray-700">Ich weiß, wie ich mich motivieren kann.</CardContent>
             </Card>
             <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Blockaden lösen</CardTitle>
+              <CardHeader className="gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <Zap className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg whitespace-nowrap">8. Selbstwirksamkeit</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">Hindernisse erkennen und überwinden macht den Weg frei für Lernen und Entwicklung</CardContent>
+              <CardContent className="text-gray-700">Ich weiß, dass ich etwas verändern kann.</CardContent>
             </Card>
           </div>
+          <p className="mt-8 text-xl font-semibold text-gray-900">
+            In dir steckt mehr.
+          </p>
+          <p className="mt-2 text-sm font-semibold tracking-[0.16em] text-[#006465] uppercase">
+            Stärker. Ruhiger. Zuversichtlicher. Du.
+          </p>
         </div>
       </section>
 
@@ -131,11 +202,11 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                  <li>Finde deine innere Stärke</li>
-                  <li>Lerne deine Gefühle besser kennen und gehe selbstbewusst mit ihnen um.</li>
-                  <li>Entdecke, was dich motiviert – und wie du Blockaden überwinden kannst.</li>
-                  <li>Stärke deine Konzentration, deinen Umgang mit Stress und deine Fähigkeit, Konflikte zu lösen.</li>
-                  <li>Mit den acht Wegen von OKTOWAY findest du heraus, wie du dein Potential voll entfalten kannst.</li>
+                  <li>Stärke beginnt bei dir – und in dir steckt mehr.</li>
+                  <li>Lerne deine Gefühle, Stärken und Schwächen besser kennen.</li>
+                  <li>Entdecke, wie du dich selbst regulieren, motivieren und entfalten kannst.</li>
+                  <li>Nimm konkrete Werkzeuge mit für Stress, Konflikte und den Schulalltag.</li>
+                  <li>Mit den acht Wegen von OKTOWAY wirst du stärker, ruhiger und zuversichtlicher.</li>
                 </ul>
               </CardContent>
             </Card>
@@ -148,10 +219,10 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                  <li>OKTOWAY vermittelt Schüler:innen Fähigkeiten zur Selbstregulation, Achtsamkeit und Konfliktlösung.</li>
-                  <li>Das sorgt für mehr Klarheit, Konzentration und gegenseitigen Respekt.</li>
-                  <li>Lehrkräfte erleben dadurch ein konstruktiveres Lernklima und weniger Störungen im Unterricht.</li>
-                  <li>Begleitende Materialien und Übungen machen die Umsetzung leicht und praxisnah.</li>
+                  <li>OKTOWAY stärkt Selbstregulation, Selbstverantwortung und ein achtsames Miteinander.</li>
+                  <li>Jedes Modul wird praktisch, bewegungsorientiert und altersgerecht erarbeitet – ohne lange Theorieblöcke.</li>
+                  <li>Lehrkräfte erleben mehr Klarheit, Konzentration und gegenseitigen Respekt im Unterricht.</li>
+                  <li>Die Schüler:innen nehmen konkrete Strategien mit: für Stress, Gefühle, Motivation und Konflikte.</li>
                 </ul>
               </CardContent>
             </Card>
@@ -165,10 +236,10 @@ export default function HomePage() {
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
                   <li>Starke Kinder – starke Familien</li>
-                  <li>Kinder, die ihre Gefühle verstehen und regulieren können, sind selbstbewusster und ausgeglichener.</li>
+                  <li>Kinder, die sich selbst wahrnehmen, akzeptieren und regulieren können, sind selbstbewusster und ausgeglichener.</li>
                   <li>Einblicke in die 8 Wege von OKTOWAY erhalten die Eltern momentan über die Webseite.</li>
                   <li>Weitere Informationskanäle sind in Arbeit.</li>
-                  <li>Gemeinsam entsteht ein Umfeld, in dem Lernen, Entwicklung und Zusammenhalt besser gelingen können.</li>
+                  <li>Gemeinsam entsteht ein Umfeld, in dem Lernen, Entwicklung und Zusammenhalt besser gelingen.</li>
                 </ul>
               </CardContent>
             </Card>
@@ -192,113 +263,58 @@ export default function HomePage() {
       <section className="py-16 bg-gray-50" id="herausforderungen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Herausforderungen für Schüler:innen und Jugendliche heute
+            Was bringen unsere Jugendlichen morgens mit in die Schule?
           </h2>
-          <ol className="mt-8 space-y-6 list-decimal pl-5 text-gray-700">
-            <li>
-              <div className="text-lg font-semibold text-gray-900">
-                Dauerstress und Leistungsdruck
-              </div>
-              <p className="mt-2">
-                Viele Jugendliche stehen unter hohem schulischem und außerschulischem Druck: Noten, Prüfungen, Social Media–Vergleiche und Zukunftsängste. Das führt oft zu Anspannung, Schlafproblemen oder dem Gefühl, nie „genug“ zu sein.
-              </p>
-            </li>
-            <li>
-              <div className="text-lg font-semibold text-gray-900">
-                Emotionale Überforderung
-              </div>
-              <p className="mt-2">
-                Gefühle wie Angst, Wut oder Traurigkeit sind normal – doch vielen fehlt das Werkzeug, sie bewusst wahrzunehmen und konstruktiv damit umzugehen. Stattdessen stauen sich Emotionen auf oder brechen unkontrolliert heraus.
-              </p>
-            </li>
-            <li>
-              <div className="text-lg font-semibold text-gray-900">
-                Digitale Ablenkung und ständige Erreichbarkeit
-              </div>
-              <p className="mt-2">
-                Smartphones, Social Media und Gaming machen es schwer, sich zu konzentrieren und echte Pausen zu erleben. Die ständige Reizüberflutung kann zu innerer Unruhe und nachlassender Aufmerksamkeit führen.
-              </p>
-            </li>
-            <li>
-              <div className="text-lg font-semibold text-gray-900">
-                Konflikte und fehlende Kommunikation
-              </div>
-              <p className="mt-2">
-                Ob in der Klasse, in der Familie oder im Freundeskreis – Missverständnisse und Streitigkeiten belasten. Ohne Strategien zur gewaltfreien Kommunikation eskalieren Konflikte schnell.
-              </p>
-            </li>
-            <li>
-              <div className="text-lg font-semibold text-gray-900">
-                Orientierungslosigkeit und Selbstzweifel
-              </div>
-              <p className="mt-2">
-                Die Suche nach der eigenen Identität kann verunsichern. Viele Jugendliche fragen sich: „Wer bin ich?“, „Was kann ich?“, „Wie finde ich meinen Platz?“ – und fühlen sich dabei allein.
-              </p>
-            </li>
-          </ol>
+          <p className="mt-4 text-lg text-gray-700">
+            Lernen beginnt nicht erst mit dem Unterricht. Viele junge Menschen kommen bereits mit einem vollen inneren Rucksack an.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {[
+              'Leistungsdruck',
+              'Social Media',
+              'Müdigkeit',
+              'Selbstzweifel',
+              'Streit',
+              'Erwartungen',
+              'Vergleiche',
+              'Reizüberflutung',
+              'Zukunftsfragen',
+              'Gefühle',
+              'Angst zu versagen',
+              'Pubertät'
+            ].map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center rounded-full border border-red-200 bg-red-100 px-4 py-2 text-sm font-medium text-red-800"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+          <p className="mt-8 text-xl font-semibold text-gray-900">
+            Und dann sagen wir: „So. Jetzt konzentrier dich.“
+          </p>
         </div>
       </section>
 
-      <section className="py-16 bg-white w-full" id="warum">
+      <section className="py-16 bg-white w-full" id="erleben">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Warum OKTOWAY die passende Antwort ist</h2>
-          <p className="mt-4 text-lg text-gray-700">
-            Das Projekt OKTOWAY – Acht Wege zu ganzheitlicher Stärke setzt genau hier an. Es vermittelt Schritt für Schritt Kompetenzen, die junge Menschen heute dringend brauchen:
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            Mehr als Wissen – echte Erfahrungen.
+          </h2>
+          <p className="mt-3 text-lg text-gray-700">
+            Für ein starkes Ich. Jeder der 8 Wege wird praktisch, bewegungsorientiert und altersgerecht erarbeitet.
           </p>
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
             <Card>
               <CardHeader className="flex flex-row items-start gap-3">
                 <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
-                  <Eye className="h-5 w-5" />
+                  <Move className="h-5 w-5" />
                 </div>
-                <CardTitle className="text-lg">Achtsamkeit</CardTitle>
+                <CardTitle className="text-lg">Bewegen</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Jugendliche lernen, ihre eigenen Bedürfnisse zu erkennen und ernst zu nehmen – die Basis für Selbstfürsorge und innere Ruhe. (Atmentechniken, Stille)
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="flex flex-row items-start gap-3">
-                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
-                  <Scan className="h-5 w-5" />
-                </div>
-                <CardTitle className="text-lg">Wahrnehmung</CardTitle>
-              </CardHeader>
-              <CardContent className="text-gray-700">
-                Perspektivenwechsel schult Empathie. Wer versteht, wie andere fühlen und denken, kann Konflikte besser lösen und Beziehungen stärken. (Eisbergmodell/ Meine Welt - deine Welt)
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="flex flex-row items-start gap-3">
-                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
-                  <Gauge className="h-5 w-5" />
-                </div>
-                <CardTitle className="text-lg">Selbstregulation</CardTitle>
-              </CardHeader>
-              <CardContent className="text-gray-700">
-                Schüler:innen entwickeln Strategien, um in Stresssituationen von „rot“ wieder „auf Grün“ zu kommen. Unterschiedlichste Methoden und Werkzeuge können individuell ausprobiert und an die eigenen Bedürfnisse angepasst werden.
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="flex flex-row items-start gap-3">
-                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
-                  <Heart className="h-5 w-5" />
-                </div>
-                <CardTitle className="text-lg">Selbstakzeptanz</CardTitle>
-              </CardHeader>
-              <CardContent className="text-gray-700">
-                OKTOWAY fördert ein gesundes Selbstbild: „Ich bin gut, so wie ich bin“ – eine starke Grundlage gegen Leistungsdruck und Selbstzweifel.
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="flex flex-row items-start gap-3">
-                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
-                  <Rocket className="h-5 w-5" />
-                </div>
-                <CardTitle className="text-lg">Potentialentfaltung</CardTitle>
-              </CardHeader>
-              <CardContent className="text-gray-700">
-                Die eigenen Stärken erkennen und nutzen – und gleichzeitig konstruktiv mit Schwächen umgehen. Durch Spiele wie „Fehlerfreude“ oder „0-5“ öffnen sich neue Wege im Umgang mit Versagensängsten und sie erfahren und lernen dadurch, wieder besser zu fokussieren.
+                Der Körper kommt ins Spiel. Bewegung, kleine Challenges, Atemübungen, Wahrnehmungsübungen.
               </CardContent>
             </Card>
             <Card>
@@ -306,44 +322,182 @@ export default function HomePage() {
                 <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
                   <MessageCircle className="h-5 w-5" />
                 </div>
-                <CardTitle className="text-lg">Konfliktmanagement</CardTitle>
+                <CardTitle className="text-lg">Reflektieren</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Techniken wie aktives Zuhören und Ich-Botschaften helfen, Spannungen respektvoll zu klären und gemeinsam Lösungen zu finden.
+                Ich finde heraus, was das mit mir zu tun hat. Kurze Gespräche, Fragen, Austausch – keine langen Theorieblöcke.
               </CardContent>
             </Card>
             <Card>
               <CardHeader className="flex flex-row items-start gap-3">
                 <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
-                  <Move className="h-5 w-5" />
+                  <Sparkles className="h-5 w-5" />
                 </div>
-                <CardTitle className="text-lg">Bewegung</CardTitle>
+                <CardTitle className="text-lg">Erleben</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Körperliche Aktivität wird bewusst genutzt, um Gefühle, Gedanken und Stress in Fluss zu bringen – ein wirksamer Schlüssel zu innerer Balance. (Rechte und linke Gehirnhälften gleichzeitig aktivieren)
+                Ich mache eigene Erfahrungen. Spiele, Experimente, Teamaufgaben, Perspektivwechsel.
               </CardContent>
             </Card>
             <Card>
               <CardHeader className="flex flex-row items-start gap-3">
                 <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
-                  <Unlock className="h-5 w-5" />
+                  <Wrench className="h-5 w-5" />
                 </div>
-                <CardTitle className="text-lg">Blockaden lösen</CardTitle>
+                <CardTitle className="text-lg">Werkzeuge mitnehmen</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                OKTOWAY zeigt Wege, innere Hindernisse zu erkennen, zu bearbeiten und langfristig zu vermeiden – damit Lernen und persönliche Entwicklung leichter gelingen. (Blackout Situationen z.B. in einer Klassenarbeit beheben oder bestenfalls verhindern können)
+                Ich weiß, was ich im Alltag tun kann. Konkrete Strategien für den Umgang mit Stress, Gefühlen, fehlender Motivation und Konflikten.
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
-      <section className="py-16 bg-white w-full">
+
+      <section className="py-16 bg-gray-50" id="ablauf">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Warum OKTOWAY – und warum ein Oktopus?
+            Verstehen. Ausprobieren. Im Alltag anwenden.
           </h2>
-          <p className="mt-4 text-lg text-gray-700">
-            Der Oktopus gilt als eines der klügsten Tiere der Welt: Er passt sich schnell an neue Situationen an, löst Probleme kreativ und bleibt dabei flexibel. Genau diese Fähigkeiten fördern wir mit OKTOWAY. Unsere acht Wege stehen – wie die acht Arme des Oktopus – für acht Kompetenzen, die Schülerinnen und Schüler stark machen. So wird der Oktopus zum Sinnbild für Anpassungsfähigkeit, Klarheit und Ganzheit – und OKTOWAY zum Weg, diese Stärke im Schulalltag zu leben.
+          <p className="mt-3 text-lg text-gray-700">
+            Kleine Schritte. Große Wirkung. So entsteht der persönliche Werkzeugkoffer fürs Leben.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <Card>
+              <CardHeader>
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center mb-3">
+                  <MapPin className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">01 Ankommen</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Wo stehe ich gerade? Kurzer Check-in, Bewegung oder überraschender Einstieg.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center mb-3">
+                  <Play className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">02 Ausprobieren</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Ich probiere etwas aus. Spiel, Challenge, Experiment, Bewegung oder Teamaufgabe.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center mb-3">
+                  <Lightbulb className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">03 Verstehen</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Was hat das mit mir zu tun? Erfahrung reflektieren, Gefühle und Verhalten verstehen, Perspektiven wechseln.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center mb-3">
+                  <Backpack className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">04 Mitnehmen</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">
+                Was kann ich im Alltag damit anfangen? Eine konkrete Strategie, ein Werkzeug oder ein persönlicher Vorsatz.
+              </CardContent>
+            </Card>
+          </div>
+          <p className="mt-8 text-xl font-semibold text-gray-900">
+            Mein Werkzeugkoffer fürs Leben
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white w-full" id="warum">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            Warum ein Oktopus?
+          </h2>
+          <p className="mt-3 text-lg text-gray-700">
+            Kleine Tiere. Große Inspiration. Genau diese Fähigkeiten brauchen auch junge Menschen, um ihren eigenen Weg zu finden.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Brain className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Intelligent</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">Er lernt, beobachtet und löst Probleme.</CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <RefreshCw className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Anpassungsfähig</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">Er findet sich in neuen Situationen zurecht und bleibt flexibel.</CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Scan className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Wahrnehmungsstark</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">Er nimmt seine Umgebung sehr genau wahr.</CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <HeartHandshake className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Einfühlsam</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">Er spürt seine Umwelt und reagiert sensibel auf Veränderungen.</CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Layers className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Vielseitig</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">Acht Arme – viele Möglichkeiten.</CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <Lightbulb className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Kreativ</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">Wenn ein Weg nicht funktioniert, findet er einen anderen.</CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#006465]/10 text-[#006465] flex items-center justify-center">
+                  <Link2 className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Verbunden</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">Seine Arme können eigenständig handeln und gehören trotzdem zu einem Ganzen.</CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#f8bd39]/10 text-[#f8bd39] flex items-center justify-center">
+                  <Mountain className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Ausdauernd</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700">Er bleibt ruhig, auch wenn es herausfordernd wird, und findet immer neue Lösungen.</CardContent>
+            </Card>
+          </div>
+          <p className="mt-8 text-sm font-semibold tracking-[0.16em] text-[#006465] uppercase">
+            8 Tentakel. 8 Fähigkeiten. 8 Wege zur Stärke.
           </p>
         </div>
       </section>
@@ -383,8 +537,8 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-gray-700">
-                OKTOWAY stärkt Schüler:innen in Achtsamkeit, Selbstregulation und Konfliktlösung –
-                mit praxisnahen Materialien und viel Herzblut für eine wertschätzende Lernkultur.
+                OKTOWAY stärkt Schüler:innen in Selbstfürsorge, Selbstregulation und Selbstwirksamkeit –
+                praktisch, bewegungsorientiert und mit einem Werkzeugkoffer fürs Leben.
               </p>
             </div>
             <div>
@@ -403,7 +557,7 @@ export default function HomePage() {
                     <span className="text-[#006465]">OKTO</span>
                     <span className="text-[#f8bd39]">WAY</span>
                   </div>
-                  <div className="text-sm text-gray-600 mt-0 leading-none">Acht Wege zu ganzheitlicher Stärke</div>
+                  <div className="text-sm text-gray-600 mt-0 leading-none">8 Wege zur Stärke für dich</div>
                 </div>
               </div>
             </div>
@@ -542,7 +696,7 @@ export default function HomePage() {
       )}
       <div className="py-4 bg-white border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
-          OKTOWAY Copyright ({currentYear}) - Acht Wege zu ganzheitlicher Stärke
+          OKTOWAY Copyright ({currentYear}) – 8 Wege zur Stärke für dich
         </div>
       </div>
     </main>

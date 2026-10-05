@@ -6,9 +6,9 @@ import { SWRConfig } from 'swr';
 import CookieConsent from '@/components/cookie-consent';
 
 export const metadata: Metadata = {
-  title: 'OKTOWAY – Acht Wege zu ganzheitlicher Stärke',
+  title: 'OKTOWAY – 8 Wege zur Stärke für dich',
   description:
-    'OKTOWAY begleitet Schüler:innen, Lehrkräfte und Eltern dabei, Gefühle bewusst wahrzunehmen, zu benennen und konstruktiv zu nutzen – für Motivation, Konzentration und ein wertschätzendes Lernklima.'
+    'OKTOWAY begleitet Schüler:innen, Lehrkräfte und Eltern: Stärke beginnt bei dir. Achtsam. Stark. Gemeinsam. Entdecken, verstehen, wachsen – mit acht Wegen zur inneren Stärke.'
 };
 
 export const viewport: Viewport = {
